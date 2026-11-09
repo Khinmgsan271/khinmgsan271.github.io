@@ -1,0 +1,16 @@
+"use strict";
+const assert=require("node:assert/strict");
+const {rows}=require("../data.js");
+const {filteredRows,rowsToCsv,csvSafe}=require("../utils.js");
+assert.equal(rows.length,7);
+assert.equal(rows.filter(r=>r.status==="Installed").length,5);
+assert.equal(filteredRows(rows,"phantom","all").length,1);
+assert.equal(filteredRows(rows,"Example Profile","Installed").length,5);
+assert.equal(filteredRows(rows,"unlikely query","all").length,0);
+assert.equal(filteredRows(rows,"","Not installed").length,2);
+assert.equal(rowsToCsv(rows).split("\r\n").filter(Boolean).length,8);
+assert.ok(csvSafe("=HYPERLINK()").startsWith("\"'="));
+assert.ok(csvSafe("+SUM(1)").startsWith("\"'+"));
+assert.ok(rows.every(r=>Object.keys(r).every(k=>!["privateKey","seed","recoveryPhrase","balance","address"].includes(k))));
+assert.ok(rows.every(r=>r.profile.startsWith("Example Profile")||r.profile==="—"));
+console.log("PASS: WalletScope synthetic demo data, filters, exports and CSV safety checks.");
