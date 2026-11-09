@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="WalletScope original, offline wallet-software inventory interface demo with synthetic records.">
+<meta name="theme-color" content="#0d131b">
+<title>WalletScope — Interactive Portfolio Demo</title>
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<a class="skip" href="#table-title">Skip to sample table</a>
+<div class="workspace">
+<aside class="sidebar">
+  <a href="../" class="side-brand"><span class="brand-mark">◆</span><span>WALLETSCOPE<small>UI LAB / PORTFOLIO</small></span></a>
+  <p class="side-title">WORKSPACE</p>
+  <nav aria-label="Workspace navigation">
+    <a href="#overview" class="side-link active"><span>◫</span> Overview</a>
+    <a href="#inventory" class="side-link"><span>▤</span> Sample inventory</a>
+    <a href="#method" class="side-link"><span>◇</span> Privacy notes</a>
+  </nav>
+  <div class="side-divider"></div>
+  <p class="side-title">PROJECT</p>
+  <a class="side-link" href="https://github.com/Khinmgsan271/khinmgsan271.github.io" target="_blank" rel="noopener noreferrer"><span>↗</span> Source code</a>
+  <a class="side-link" href="../"><span>←</span> Portfolio home</a>
+  <div class="side-bottom"><span class="dot"></span> Offline-capable demo<small>Original · 2026 · AI-assisted</small></div>
+</aside>
+<div class="main-shell">
+<header class="topbar">
+  <div class="crumbs"><a href="../">Portfolio</a><span>/</span>WalletScope<span>/</span><strong>Overview</strong></div>
+  <div class="top-actions"><span class="live"><span class="dot"></span> Demo environment</span><a class="home-link" href="../">Portfolio ↗</a></div>
+</header>
+<main id="overview" class="dashboard">
+  <div class="heading-row">
+    <div><p class="kicker">DEMONSTRATION · 100% SYNTHETIC RECORDS</p><h1>Software inventory <span>at a glance.</span></h1><p class="subhead">A prototype for organizing example wallet-software names. Nothing on your computer is inspected or collected.</p></div>
+    <div class="version-card">PROTOTYPE <strong>v 0.1</strong><small>Local UI only</small></div>
+  </div>
+  <div class="warning" role="note"><span class="warning-icon">ⓘ</span><p><strong>Privacy by design.</strong> All records are fictional. No browser extensions, software installations, processes, files, addresses, private keys, recovery phrases or wallet balances are read. The dashboard makes <strong>no network requests</strong>.</p></div>
+  <section class="stats" aria-label="Inventory overview">
+    <article class="stat-card"><div class="stat-name">SAMPLE RECORDS <span>↗</span></div><div class="stat-value" id="stat-total">07</div><div class="stat-sub">Fictional records in preview</div></article>
+    <article class="stat-card"><div class="stat-name">SAMPLE INSTALLED <span>◉</span></div><div class="stat-value" id="stat-installed">05</div><div class="stat-sub">Illustrative status only</div></article>
+    <article class="stat-card"><div class="stat-name">SAMPLE NOT INSTALLED <span>◇</span></div><div class="stat-value" id="stat-not-installed">02</div><div class="stat-sub">Not based on this device</div></article>
+    <article class="stat-card sensitive"><div class="stat-name">SENSITIVE DATA READ <span>◈</span></div><div class="stat-value">00</div><div class="stat-sub">Always zero; no scanner exists</div></article>
+  </section>
+  <section class="inventory-panel" id="inventory" aria-labelledby="table-title">
+    <div class="panel-header"><div><p class="panel-number">01 / INVENTORY TABLE</p><h2 id="table-title">Example applications</h2><p>Search, filter, and export these fictional entries.</p></div><button class="export-btn" type="button" id="download-btn">↓ Export filtered CSV</button></div>
+    <div class="filters"><label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" autocomplete="off" placeholder="Search example wallet, browser, profile…" aria-label="Search example inventory"><kbd>/</kbd></label><label class="select-label">STATUS <select id="status" aria-label="Filter example status"><option value="all">All statuses</option><option value="Installed">Installed (sample)</option><option value="Not installed">Not installed (sample)</option></select></label></div>
+    <div class="table-scroll"><table><thead><tr><th>APPLICATION</th><th>TYPE</th><th>BROWSER</th><th>EXAMPLE PROFILE</th><th>SAMPLE DATE</th><th>FICTIONAL STATUS</th></tr></thead><tbody id="table-body"></tbody></table></div>
+    <div class="table-footer"><span id="result-count" role="status" aria-live="polite">Showing 7 fictional records</span><span>No real wallet information</span></div>
+  </section>
+  <section id="method" class="method-panel"><div class="method-title"><p class="panel-number">02 / ENGINEERING NOTES</p><h2>A deliberate privacy boundary.</h2></div><div class="method-grid">
+    <div><span>01</span><h3>Offline sample records</h3><p>All rows come from a hard-coded sample data array. This project never enumerates browser extensions or scans real software.</p></div>
+    <div><span>02</span><h3>No wallet connection</h3><p>No blockchain RPC calls, network access, wallet addresses, seeds, keys or balances. No permissions or signatures requested.</p></div>
+    <div><span>03</span><h3>Transparent scope</h3><p>An AI-assisted UI portfolio prototype with documented code. The companion C# WPF source has not been compiled on Windows.</p></div>
+  </div></section>
+  <footer class="footer"><span>WalletScope — original portfolio demo for Khin Mg San</span><a href="../">Return to portfolio ↗</a></footer>
+</main></div></div>
+<script src="data.js"></script><script src="utils.js"></script><script src="app.js" defer></script>
+</body></html>

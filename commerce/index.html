@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="CartCraft, a fictional responsive e-commerce storefront with a working cart and no payments.">
+<title>CartCraft — E-commerce UI Demo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav"><a class="brand" href="../"><span class="brandmark">C<span>.</span></span><span>CARTCRAFT<small>STOREFRONT LAB</small></span></a>
+<nav><a href="#catalog">Catalog</a><a href="#principles">Design notes</a><a href="../">Portfolio ↗</a></nav>
+<button class="bag-btn" id="cart-open" type="button" aria-label="Open demonstration cart">Bag <span id="cart-count">0</span></button></header>
+<main>
+<section class="hero">
+<div class="hero-inner">
+<div class="intro"><p class="eyebrow">INTERACTIVE E-COMMERCE CONCEPT · DEMO ONLY</p><h1>Everyday objects,<br><em>beautifully arranged.</em></h1><p>A responsive store interface showcasing product search, categories, sorting, basket quantities, and checkout estimates—with fictional products and no real payments.</p><a class="btn" href="#catalog">Explore collection <span>↘</span></a></div>
+<div class="hero-art" aria-label="Abstract illustration of homeware objects"><div class="art-disc"></div><div class="art-bowl"></div><div class="art-stem"></div><div class="art-vase"></div><div class="art-shadow"></div><div class="art-caption">COLLECTION / 001</div></div>
+</div>
+</section>
+<section class="catalog container" id="catalog"><div class="title-row"><div><p class="eyebrow dark">01 / SELECTED OBJECTS</p><h2>Explore the collection.</h2></div><p>Eight fictional products. Real cart interactions. All prices in demonstration USD.</p></div>
+<div class="toolbar"><label class="search">⌕ <input type="search" id="q" placeholder="Search products..." aria-label="Search demo products"></label><label>Category <select id="category"><option value="all">All categories</option><option>Homeware</option><option>Workspace</option><option>Accessories</option></select></label><label>Sort <select id="sort"><option value="default">Featured</option><option value="low">Price: low–high</option><option value="high">Price: high–low</option></select></label></div>
+<div class="products" id="products" aria-live="polite"></div>
+</section>
+<section class="ethos" id="principles"><div class="container ethos-inner"><div><p class="eyebrow">02 / DESIGN NOTES</p><h2>Interface first.<br><em>Privacy always.</em></h2></div><div><p><strong>Portfolio prototype — not a real store.</strong> These products, prices, inventory counts, discounts, and customers are fictional. This demo does not offer payments or send data to a server.</p><p>Mobile-friendly layouts, accessible buttons, product filtering, cart state and a clearly explained order estimate are included to demonstrate entry-level e-commerce web programming.</p></div></div></section>
+</main>
+<aside id="cart-panel" class="cart-panel" aria-label="Demonstration shopping bag" aria-hidden="true"><div class="cart-head"><h2>Your bag <small>DEMO ONLY</small></h2><button id="cart-close" aria-label="Close cart">×</button></div><div id="cart-items" class="cart-items"></div><div class="cart-total"><div><span>Subtotal</span><strong id="subtotal">$0.00</strong></div><div><span>Estimated shipping</span><strong id="shipping">$0.00</strong></div><div class="grand"><span>Estimated total</span><strong id="grand-total">$0.00</strong></div><p>This is a fictional estimate. No checkout, account, or payment collection exists.</p><button id="reset" class="reset-btn">Clear demonstration bag</button></div></aside>
+<div class="scrim" id="scrim" hidden></div>
+<footer class="footer container"><span>© 2026 CartCraft · AI-assisted portfolio exercise for Khin Mg San</span><a href="../">← Portfolio</a></footer>
+<script src="app.js" defer></script>
+</body></html>

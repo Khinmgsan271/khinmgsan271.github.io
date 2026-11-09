@@ -1,58 +1,110 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="WalletScope original, offline wallet-software inventory interface demo with synthetic records.">
-<meta name="theme-color" content="#0d131b">
-<title>WalletScope — Interactive Portfolio Demo</title>
-<link rel="stylesheet" href="demo.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Khin Mg San — remote junior software and digital engineering portfolio, including a privacy-first wallet software inventory demo.">
+  <meta name="theme-color" content="#101720">
+  <title>Khin Mg San — Digital Engineering Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="skip" href="#table-title">Skip to sample table</a>
-<div class="workspace">
-<aside class="sidebar">
-  <a href="../" class="side-brand"><span class="brand-mark">◆</span><span>WALLETSCOPE<small>UI LAB / PORTFOLIO</small></span></a>
-  <p class="side-title">WORKSPACE</p>
-  <nav aria-label="Workspace navigation">
-    <a href="#overview" class="side-link active"><span>◫</span> Overview</a>
-    <a href="#inventory" class="side-link"><span>▤</span> Sample inventory</a>
-    <a href="#method" class="side-link"><span>◇</span> Privacy notes</a>
-  </nav>
-  <div class="side-divider"></div>
-  <p class="side-title">PROJECT</p>
-  <a class="side-link" href="https://github.com/Khinmgsan271/khinmgsan271.github.io" target="_blank" rel="noopener noreferrer"><span>↗</span> Source code</a>
-  <a class="side-link" href="../"><span>←</span> Portfolio home</a>
-  <div class="side-bottom"><span class="dot"></span> Offline-capable demo<small>Original · 2026 · AI-assisted</small></div>
-</aside>
-<div class="main-shell">
-<header class="topbar">
-  <div class="crumbs"><a href="../">Portfolio</a><span>/</span>WalletScope<span>/</span><strong>Overview</strong></div>
-  <div class="top-actions"><span class="live"><span class="dot"></span> Demo environment</span><a class="home-link" href="../">Portfolio ↗</a></div>
-</header>
-<main id="overview" class="dashboard">
-  <div class="heading-row">
-    <div><p class="kicker">DEMONSTRATION · 100% SYNTHETIC RECORDS</p><h1>Software inventory <span>at a glance.</span></h1><p class="subhead">A prototype for organizing example wallet-software names. Nothing on your computer is inspected or collected.</p></div>
-    <div class="version-card">PROTOTYPE <strong>v 0.1</strong><small>Local UI only</small></div>
-  </div>
-  <div class="warning" role="note"><span class="warning-icon">ⓘ</span><p><strong>Privacy by design.</strong> All records are fictional. No browser extensions, software installations, processes, files, addresses, private keys, recovery phrases or wallet balances are read. The dashboard makes <strong>no network requests</strong>.</p></div>
-  <section class="stats" aria-label="Inventory overview">
-    <article class="stat-card"><div class="stat-name">SAMPLE RECORDS <span>↗</span></div><div class="stat-value" id="stat-total">07</div><div class="stat-sub">Fictional records in preview</div></article>
-    <article class="stat-card"><div class="stat-name">SAMPLE INSTALLED <span>◉</span></div><div class="stat-value" id="stat-installed">05</div><div class="stat-sub">Illustrative status only</div></article>
-    <article class="stat-card"><div class="stat-name">SAMPLE NOT INSTALLED <span>◇</span></div><div class="stat-value" id="stat-not-installed">02</div><div class="stat-sub">Not based on this device</div></article>
-    <article class="stat-card sensitive"><div class="stat-name">SENSITIVE DATA READ <span>◈</span></div><div class="stat-value">00</div><div class="stat-sub">Always zero; no scanner exists</div></article>
-  </section>
-  <section class="inventory-panel" id="inventory" aria-labelledby="table-title">
-    <div class="panel-header"><div><p class="panel-number">01 / INVENTORY TABLE</p><h2 id="table-title">Example applications</h2><p>Search, filter, and export these fictional entries.</p></div><button class="export-btn" type="button" id="download-btn">↓ Export filtered CSV</button></div>
-    <div class="filters"><label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" autocomplete="off" placeholder="Search example wallet, browser, profile…" aria-label="Search example inventory"><kbd>/</kbd></label><label class="select-label">STATUS <select id="status" aria-label="Filter example status"><option value="all">All statuses</option><option value="Installed">Installed (sample)</option><option value="Not installed">Not installed (sample)</option></select></label></div>
-    <div class="table-scroll"><table><thead><tr><th>APPLICATION</th><th>TYPE</th><th>BROWSER</th><th>EXAMPLE PROFILE</th><th>SAMPLE DATE</th><th>FICTIONAL STATUS</th></tr></thead><tbody id="table-body"></tbody></table></div>
-    <div class="table-footer"><span id="result-count" role="status" aria-live="polite">Showing 7 fictional records</span><span>No real wallet information</span></div>
-  </section>
-  <section id="method" class="method-panel"><div class="method-title"><p class="panel-number">02 / ENGINEERING NOTES</p><h2>A deliberate privacy boundary.</h2></div><div class="method-grid">
-    <div><span>01</span><h3>Offline sample records</h3><p>All rows come from a hard-coded sample data array. This project never enumerates browser extensions or scans real software.</p></div>
-    <div><span>02</span><h3>No wallet connection</h3><p>No blockchain RPC calls, network access, wallet addresses, seeds, keys or balances. No permissions or signatures requested.</p></div>
-    <div><span>03</span><h3>Transparent scope</h3><p>An AI-assisted UI portfolio prototype with documented code. The companion C# WPF source has not been compiled on Windows.</p></div>
-  </div></section>
-  <footer class="footer"><span>WalletScope — original portfolio demo for Khin Mg San</span><a href="../">Return to portfolio ↗</a></footer>
-</main></div></div>
-<script src="data.js"></script><script src="utils.js"></script><script src="app.js" defer></script>
-</body></html>
+  <a class="skip" href="#main">Skip to main content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-nav">
+    <a class="brand" href="#top" aria-label="Khin Mg San home"><span class="brand-icon">K<span class="brand-dot">.</span></span><span>Khin Mg San</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-action" href="https://github.com/Khinmgsan271" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main">
+    <section class="hero container" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="online-dot"></span> SEEKING REMOTE & FREELANCE OPPORTUNITIES</div>
+        <p class="hero-kicker">ENGINEERING MINDSET. PRACTICAL DIGITAL WORK.</p>
+        <h1 id="hero-title">Building useful things, <em>one detail at a time.</em></h1>
+        <p class="hero-lead">I'm Khin Mg San, a Civil Engineering student based in Bangkok. I build lightweight software tools, data workflows, and technical designs that turn complicated problems into clear, usable results.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-outline" href="walletscope/">Launch WalletScope demo <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-meta">
+          <span>Bangkok, Thailand</span><span class="meta-divider" aria-hidden="true"></span><span>Burmese · English (B2)</span><span class="meta-divider" aria-hidden="true"></span><span>Remote-first</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Abstract interface preview of WalletScope, a demo software inventory dashboard">
+        <div class="visual-glow"></div>
+        <div class="app-mock">
+          <div class="app-mock-top"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>WALLETSCOPE / LAB</span><span class="mock-icon">↗</span></div>
+          <div class="app-mock-body">
+            <div class="mock-upper"><div><span class="mock-label">SOFTWARE INVENTORY</span><strong>Read-only by design.</strong></div><span class="mock-tag">DEMO MODE</span></div>
+            <div class="mock-stat-row"><div><span>Sample records</span><b>07</b></div><div><span>Real wallet scans</span><b>00</b></div><div><span>Keys collected</span><b>00</b></div></div>
+            <div class="mock-list">
+              <div><span class="mock-app-logo phantom">✦</span><span>Phantom<small>Chrome · Sample profile</small></span><span class="mock-status">Sample</span></div>
+              <div><span class="mock-app-logo metamask">◇</span><span>MetaMask<small>Firefox · Sample profile</small></span><span class="mock-status">Sample</span></div>
+              <div><span class="mock-app-logo rabby">⬡</span><span>Rabby<small>Edge · Sample profile</small></span><span class="mock-status">Sample</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="visual-foot"><span class="foot-line"></span> INTERACTIVE CONCEPT · BUILT WITH SYNTHETIC DATA</div>
+      </div>
+    </section>
+    <section class="proof-strip container" aria-label="Focus areas">
+      <span>PYTHON & JAVASCRIPT</span><span class="proof-star">✳</span><span>AUTOCAD & MATLAB</span><span class="proof-star">✳</span><span>UI PROTOTYPING</span><span class="proof-star">✳</span><span>DATA & QA</span>
+    </section>
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-head"><div><p class="section-label">01 / SELECTED WORK</p><h2>Proof of work, <em>not just promises.</em></h2></div><p class="section-aside">A mix of original portfolio prototypes, independent experiments, and academic exercises. Each project is labeled transparently.</p></div>
+        <div class="project-grid">
+          <article class="project-card featured">
+            <div class="project-topline"><span class="project-number">01</span><span class="project-type">ORIGINAL / AI-ASSISTED DEMO</span></div>
+            <div class="project-preview">
+              <div class="preview-grid"></div>
+              <div class="preview-window"><div class="preview-bar"><span>● ● ●</span> WalletScope / inventory</div><div class="preview-panel"><span>Inventory overview</span><strong>7 <small>sample entries</small></strong><div class="preview-bars"><i style="height:38%"></i><i style="height:72%"></i><i style="height:48%"></i><i style="height:90%"></i><i style="height:64%"></i><i style="height:82%"></i></div></div></div>
+              <span class="preview-stamp">NO REAL DATA</span>
+            </div>
+            <div class="project-info"><div><h3>WalletScope <span class="project-arrow" aria-hidden="true">↗</span></h3><p>Privacy-first inventory interface. A searchable, filterable wallet-software dashboard using fictional records, CSV export, and a separate C# WPF source prototype with consent-based, metadata-only local detection (Windows build pending).</p></div><div class="chips"><span>Vanilla JS</span><span>UI / UX</span><span>C# WPF prototype</span><span>Offline</span></div><a class="project-link" href="walletscope/">Open interactive demo <span aria-hidden="true">→</span></a></div>
+          </article>
+          <article class="project-card card-blue">
+            <div class="project-topline"><span class="project-number">02</span><span class="project-type">PREVIOUS PERSONAL PROJECT</span></div>
+            <div class="small-project-art calc-art" aria-hidden="true"><div class="calc-ui"><div>USDT / MMK RATE TRACKER</div><strong>4,420 <small>MMK</small></strong><div class="calc-line"></div><span>Conversion scenarios · Fee-aware math</span></div></div>
+            <div class="project-info"><h3>Binance P2P MMK Calculator <span class="project-arrow">↗</span></h3><p>A web calculator for experimenting with MMK, USDT, THB, rates and potential trading margins. Calculations are illustrative, not financial advice.</p><div class="chips"><span>Web app</span><span>JavaScript</span><span>Calculations</span></div><a class="project-link" href="https://github.com/Khinmgsan271/Binance-P2P-MMK" target="_blank" rel="noopener noreferrer">View existing GitHub project <span aria-hidden="true">→</span></a></div>
+          </article>
+          <article class="project-card card-peach">
+            <div class="project-topline"><span class="project-number">03</span><span class="project-type">ACADEMIC / SELF-DIRECTED</span></div>
+            <div class="small-project-art data-art" aria-hidden="true"><svg viewBox="0 0 500 210" role="img" aria-label="Stylized savings target chart"><path d="M38 172 H460 M38 122 H460 M38 72 H460" stroke="currentColor" stroke-opacity=".15"/><path d="M40 172 L102 159 L166 143 L226 129 L289 108 L354 79 L417 41" stroke="#d37f66" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="417" cy="41" r="10" fill="#d37f66"/><path d="M40 172 L102 159 L166 143 L226 129 L289 108 L354 79 L417 41 L417 172Z" fill="#d37f66" fill-opacity=".12"/></svg></div>
+            <div class="project-info"><h3>Recursive Savings Goal Planner <span class="project-arrow">↗</span></h3><p>An academic MATLAB mini-project exploring recursive savings projections, input validation, outcome classification, and safeguards for long simulations.</p><div class="chips"><span>MATLAB</span><span>Recursion</span><span>Financial math</span></div><a class="project-link" href="#contact">Ask for project samples <span aria-hidden="true">→</span></a></div>
+          </article>
+          <article class="project-card card-green">
+            <div class="project-topline"><span class="project-number">04</span><span class="project-type">ORIGINAL / AI-ASSISTED DEMO</span></div>
+            <div class="small-project-art commerce-art" aria-hidden="true"><div class="commerce-preview"><small>CARTCRAFT / STORE LAB</small><strong>Everyday<br>objects.</strong><span class="commerce-preview-objects">🏺 &nbsp; ☕ &nbsp; 💡</span></div></div>
+            <div class="project-info"><h3>CartCraft Storefront <span class="project-arrow">↗</span></h3><p>Responsive e-commerce prototype with product filtering, price sorting, cart quantity controls and fictional order totals. No checkout or real payments.</p><div class="chips"><span>Web Programming</span><span>Front End</span><span>E-Commerce</span><span>Mobile responsive</span></div><a class="project-link" href="commerce/">Try interactive storefront <span aria-hidden="true">→</span></a></div>
+          </article>
+          <article class="project-card card-purple">
+            <div class="project-topline"><span class="project-number">05</span><span class="project-type">ORIGINAL / AI-ASSISTED DEMO</span></div>
+            <div class="small-project-art quality-art" aria-hidden="true"><div class="quality-preview"><small>QUALITYDECK / QA LAB</small><div class="quality-check">✓ &nbsp; PASS &nbsp; &nbsp; ✓ &nbsp; PASS</div><div class="quality-chart">▁ ▃ ▂ ▄ ▆ ▅ █</div></div></div>
+            <div class="project-info"><h3>QualityDeck QA & Analytics <span class="project-arrow">↗</span></h3><p>A browser-based QA assertion runner and a fictional analytics dashboard with interactive data ranges. Backed by small, testable JavaScript functions.</p><div class="chips"><span>QA</span><span>Data Science & Analytics</span><span>JavaScript</span></div><a class="project-link" href="quality/">Run real demo tests <span aria-hidden="true">→</span></a></div>
+          </article>
+          <article class="project-card card-purple">
+            <div class="project-topline"><span class="project-number">06</span><span class="project-type">ORIGINAL / AI-ASSISTED DEMO</span></div>
+            <div class="small-project-art game-art" aria-hidden="true"><div class="game-preview"><span>✦</span><span>🪐</span><span>🌕</span><span>✦</span><span>🚀</span><span>✨</span><span>🌙</span><span>🌟</span></div></div>
+            <div class="project-info"><h3>MemoryOrbit Browser Game <span class="project-arrow">↗</span></h3><p>A touch-friendly memory-matching game with scoring, a timer, replay controls, and responsive layout. Learning-level game development.</p><div class="chips"><span>Game Development</span><span>Mobile Apps concepts</span><span>Front End</span></div><a class="project-link" href="arcade/">Play memory game <span aria-hidden="true">→</span></a></div>
+          </article>
+          <article class="project-card card-blue">
+            <div class="project-topline"><span class="project-number">07</span><span class="project-type">ORIGINAL / SOURCE-ONLY PROTOTYPE</span></div>
+            <div class="small-project-art backend-art" aria-hidden="true"><div class="backend-preview"><small>API / LOCALHOST ONLY</small><code>GET /api/products</code><code>GET /api/analytics</code><code>SQL → sample orders</code></div></div>
+            <div class="project-info"><h3>CartCraft API & SQL <span class="project-arrow">↗</span></h3><p>Local Node.js REST API with read-only endpoints, a sample SQLite database and automated API tests. Source code only—not hosted on GitHub Pages.</p><div class="chips"><span>Back End Developer</span><span>Databases</span><span>Node.js</span><span>Entry level</span></div><a class="project-link" href="https://github.com/Khinmgsan271/khinmgsan271.github.io/tree/main/backend" target="_blank" rel="noopener noreferrer">See backend source <span aria-hidden="true">→</span></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="approach-section container" id="about"><div class="approach-title"><p class="section-label">02 / ABOUT ME</p><h2>Engineering clarity.<br><em>Creative execution.</em></h2></div><div class="approach-copy"><p>My work sits between engineering and practical technology. I study civil engineering while building projects in Python, MATLAB, AutoCAD, front-end interfaces, and digital media.</p><p>I enjoy careful documentation, reproducible calculations, clean design, and figuring out how a tool should work before making it more complicated. I'm actively learning; the projects here distinguish prototypes from professional client work.</p><div class="skills-wrap"><span>Python</span><span>JavaScript / HTML / CSS</span><span>MATLAB</span><span>AutoCAD 2D</span><span>QA & data checks</span><span>Figma & video editing</span><span>Node.js basics</span><span>SQLite demos</span><span>Mobile-responsive UI</span><span>Game prototypes</span></div></div></section>
+    <section class="contact-section" id="contact"><div class="container contact-inner"><div><p class="section-label">03 / GET IN TOUCH</p><h2>Have a clear problem?<br><em>Let's build a clear solution.</em></h2><p>Open to discussing junior remote software, digital engineering, data, and design projects, subject to engagement eligibility and project scope.</p><a class="btn btn-primary" href="mailto:sun251638113@gmail.com?subject=Remote%20Project%20Enquiry">Email me <span aria-hidden="true">↗</span></a></div><div class="contact-links"><a href="https://github.com/Khinmgsan271" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><a href="https://www.linkedin.com/in/khin-mg-san-943ab3403/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a><a href="https://www.freelancer.com/u/Fredevlo" target="_blank" rel="noopener noreferrer">Freelancer <span>↗</span></a><a href="walletscope/">WalletScope demo <span>↗</span></a></div></div></section>
+  </main>
+  <footer class="site-footer container"><span>© <span id="year">2026</span> Khin Mg San · Built for clarity.</span><span>Portfolio demonstrations are labeled; no wallet data is collected.</span></footer>
+  <script src="main.js" defer></script>
+</body>
+</html>

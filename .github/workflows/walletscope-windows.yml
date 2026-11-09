@@ -1,0 +1,32 @@
+name: WalletScope Windows WPF build
+
+on:
+  push:
+    paths:
+      - "walletscope/source/WalletScope.Wpf/**"
+      - ".github/workflows/walletscope-windows.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build Windows WPF app (no scan)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+      - name: Restore and compile
+        run: dotnet build walletscope/source/WalletScope.Wpf/WalletScope.Wpf.csproj -c Release --nologo
+      - name: Publish Windows x64 single-file package
+        run: dotnet publish walletscope/source/WalletScope.Wpf/WalletScope.Wpf.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -o out/win-x64
+      - name: Upload build output
+        uses: actions/upload-artifact@v4
+        with:
+          name: WalletScope-Windows-x64-build
+          path: out/win-x64/
+          retention-days: 7
