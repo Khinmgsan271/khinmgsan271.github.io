@@ -49,7 +49,7 @@ Then visit \`http://127.0.0.1:8765/api/health\`. This API binds only to localhos
 - [GitHub Pages documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) — deployment
 - General interaction patterns used by e-commerce storefronts, analytics dashboards, browser games and software engineering test suites (not reproductions of any specific product's source code)
 
-## LaborX skills
+## skills
 
 **Hands-on or academic experience:** Python, JavaScript, HTML/CSS, beginner front end, AutoCAD, MATLAB, entry-level QA, technical documentation and data work.
 
